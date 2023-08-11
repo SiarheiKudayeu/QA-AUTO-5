@@ -16,5 +16,6 @@ public class Test {
         driver.findElement(By.xpath("//div[text()='Accept all']")).click();
         System.out.println(driver.getTitle());
         driver.quit();
+        System.out.println("end");
     }
 }
