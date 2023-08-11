@@ -7,15 +7,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Test {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/Users/kudayeusiarhei/Desktop/chromedriver2/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\selen15\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/Users/kudayeusiarhei/chrome/mac_arm-115.0.5790.102/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing");
+        options.setBinary("C:\\selen15\\chrome-win64\\chrome.exe");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.google.com/");
-        driver.findElement(By.xpath("//div[text()='Accept all']")).click();
+        driver.findElement(By.xpath("//div[text()='Принять все']")).click();
         System.out.println(driver.getTitle());
         driver.quit();
-        System.out.println("end");
     }
 }
